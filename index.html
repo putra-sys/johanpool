@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jasa Kolam Renang Depok | Pembuatan & Renovasi Johan Pool</title>
+<title>Jasa Pembuatan Kolam Renang Depok | Johan Pool</title>
 
-<meta name="description" content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional di Depok, Cinere, Jakarta, Bogor dan sekitarnya.">
-<meta name="keywords" content="jasa kolam renang depok, kontraktor kolam renang depok, pembuatan kolam renang cinere, renovasi kolam renang, johan pool">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Johan Pool">
+<meta name="description" content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional di Depok, Jakarta, Bogor dan sekitarnya.">
 
-<meta property="og:title" content="Jasa Kolam Renang Depok | Johan Pool">
-<meta property="og:description" content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional di Depok dan sekitarnya.">
+<meta property="og:title" content="Jasa Pembuatan Kolam Renang Depok | Johan Pool">
+<meta property="og:description" content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional.">
 <meta property="og:image" content="img/kolam1.jpg">
 <meta property="og:type" content="website">
 
@@ -20,36 +18,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- 🚀 SCHEMA SEO LOCAL BUSINESS -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Johan Pool",
-  "url": "https://putra-sys.github.io/johanpool/",
-  "telephone": "+6283899705188",
-  "image": "https://putra-sys.github.io/johanpool/img/kolam.jpg",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jl. H. Asmawih, Gandul",
-    "addressLocality": "Depok",
-    "addressRegion": "Jawa Barat",
-    "postalCode": "16514",
-    "addressCountry": "ID"
-  },
-  "areaServed": [
-    "Depok",
-    "Cinere",
-    "Jakarta",
-    "Bogor",
-    "Bekasi"
-  ]
-}
-</script>
-
 <style>
-
 :root{
 --dark:#081420;
 --aqua:#00C2FF;
@@ -64,7 +33,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#081420;
+background:var(--dark);
 color:white;
 overflow-x:hidden;
 }
@@ -72,8 +41,8 @@ overflow-x:hidden;
 /* HEADER */
 header{
 position:fixed;
-width:100%;
 top:0;
+width:100%;
 z-index:999;
 padding:20px 8%;
 display:flex;
@@ -96,6 +65,7 @@ nav a{
 color:white;
 margin-left:25px;
 text-decoration:none;
+font-weight:500;
 }
 
 /* HERO */
@@ -105,14 +75,16 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
 url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1800&q=80');
 background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
 font-weight:800;
 }
 
@@ -121,58 +93,119 @@ color:var(--aqua);
 }
 
 .hero p{
-margin:20px 0;
-font-size:18px;
+margin:25px 0;
+font-size:20px;
 }
 
 /* BUTTON */
 .btn{
 display:inline-block;
-padding:15px 35px;
+padding:18px 40px;
+border-radius:50px;
 background:#25D366;
-border-radius:40px;
 color:white;
 text-decoration:none;
+font-weight:600;
 }
 
-/* SECTION */
+/* SECTION GLOBAL */
 section{
-padding:80px 8%;
+padding:100px 8%;
 }
 
 /* TITLE */
-h2{
-font-size:40px;
-margin-bottom:20px;
+.title{
+text-align:center;
+font-size:50px;
+margin-bottom:50px;
 }
 
-/* CARD */
-.card{
-background:#10233f;
-padding:25px;
-border-radius:15px;
-margin:10px;
-}
-
-.grid{
+/* STATS */
+.stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.stat{
+background:#10233f;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat h2{
+font-size:50px;
+color:var(--aqua);
+}
+
+/* SERVICES */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#10233f;
+padding:30px;
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* GALLERY */
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:30px;
 background:#06101c;
+text-align:center;
+padding:40px;
+}
+
+/* FLOAT WA */
+.wa{
+position:fixed;
+right:25px;
+bottom:25px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+text-decoration:none;
+color:white;
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 <div class="logo">JOHAN<span>POOL</span></div>
 
@@ -187,59 +220,64 @@ background:#06101c;
 <!-- HERO -->
 <section class="hero" id="home">
 <div>
-<h1>Jasa Pembuatan Kolam Renang Depok - Johan Pool Profesional</h1>
-<p>Kontraktor kolam renang terpercaya untuk pembuatan, renovasi dan maintenance.</p>
+<h1>Bangun <span>Kolam Renang Impian</span> Anda</h1>
+<p>Jasa pembuatan, renovasi dan maintenance kolam renang profesional.</p>
 <a class="btn" href="https://wa.me/6283899705188">Konsultasi Gratis</a>
 </div>
 </section>
 
-<!-- SEO CONTENT -->
-<section>
-<h2>Kontraktor Kolam Renang Depok & Cinere</h2>
-<p>
-Johan Pool adalah penyedia jasa pembuatan kolam renang profesional di Depok, Cinere, Jakarta, Bogor dan sekitarnya.
-</p>
-<p>
-Kami melayani pembangunan, renovasi, perawatan, dan perbaikan kolam renang dengan hasil berkualitas tinggi.
-</p>
+<!-- STATS -->
+<section class="stats">
+<div class="stat"><h2>150+</h2><p>Proyek Selesai</p></div>
+<div class="stat"><h2>12+</h2><p>Tahun Pengalaman</p></div>
+<div class="stat"><h2>98%</h2><p>Klien Puas</p></div>
+<div class="stat"><h2>24/7</h2><p>Support</p></div>
 </section>
 
-<!-- LAYANAN -->
+<!-- SERVICES -->
 <section id="layanan">
-<h2>Layanan Kami</h2>
+<h2 class="title">Layanan Kami</h2>
 
 <div class="grid">
-<div class="card">Pembuatan Kolam Renang</div>
-<div class="card">Renovasi Kolam Renang</div>
-<div class="card">Maintenance Kolam</div>
-<div class="card">Jacuzzi & Spa</div>
+<div class="card"><h3>Pembuatan Kolam</h3><p>Rumah, villa, hotel.</p></div>
+<div class="card"><h3>Renovasi Kolam</h3><p>Modernisasi total.</p></div>
+<div class="card"><h3>Water Treatment</h3><p>Air tetap jernih.</p></div>
+<div class="card"><h3>Jacuzzi & Spa</h3><p>Desain premium.</p></div>
 </div>
 </section>
 
-<!-- GALERI -->
+<!-- GALLERY -->
 <section id="galeri">
-<h2>Galeri Proyek</h2>
+<h2 class="title">Galeri Proyek</h2>
 
-<div class="grid">
-<img src="img/kolam.jpg" alt="Kolam renang Depok Johan Pool">
-<img src="img/kolam1.jpg" alt="Proyek kolam renang">
+<div class="gallery-grid">
+<img src="img/ok kolam.jpg" alt="Kolam renang Depok Johan Pool">
+<img src="img/over flow.jpg" alt="Kolam overflow">
+<img src="img/sceming.jpg" alt="Skimming kolam renang">
+<img src="img/kolam 1.jpg" alt="Proyek kolam">
 </div>
 </section>
 
-<!-- KONTAK -->
-<section id="kontak">
-<h2>Kontak Kami</h2>
+<!-- CONTACT -->
+<section id="kontak" class="contact">
+<h2 class="title">Hubungi Kami</h2>
 
 <p>Depok, Jawa Barat</p>
 <p>📞 0838-9970-5188</p>
 
+<br>
+
 <a class="btn" href="https://wa.me/6283899705188">Chat WhatsApp</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<h3>Johan Pool</h3>
-<p>Jasa Kolam Renang Profesional Depok</p>
+<h2>JOHAN POOL</h2>
+<p>Jasa Kolam Renang Profesional</p>
 </footer>
+
+<!-- FLOAT WA -->
+<a class="wa" href="https://wa.me/6283899705188">💬</a>
 
 </body>
 </html>
