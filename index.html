@@ -319,10 +319,154 @@ font-size:35px;
 
 }
 
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+nav{
+display:none;
+}
+
+.title{
+font-size:35px;
+}
+
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#081420;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+z-index:999999;
+
+transition:.8s;
+
+}
+
+#loader.hide{
+
+opacity:0;
+visibility:hidden;
+
+}
+
+.loader-content{
+
+position:relative;
+text-align:center;
+
+}
+
+.loader-logo{
+
+width:160px;
+z-index:2;
+position:relative;
+
+animation:pulseLogo 2s infinite;
+
+}
+
+.loader-content p{
+
+margin-top:20px;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+color:#00C2FF;
+
+}
+
+.water-ring{
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+border:5px solid rgba(0,194,255,.15);
+
+border-top:5px solid #00C2FF;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+animation:spin 2s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:translate(-50%,-50%) rotate(360deg);
+
+}
+
+}
+
+@keyframes pulseLogo{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
 </style>
 </head>
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+    <div class="loader-content">
+
+        <div class="water-ring"></div>
+
+        <img src="img/logonavbar.png" class="loader-logo" alt="Johans Pool">
+
+        <p>Loading...</p>
+
+    </div>
+</div>
+    
 <header>
 
 <div class="logo">
@@ -562,6 +706,27 @@ card.style.opacity='0';
 card.style.transform='translateY(40px)';
 card.style.transition='0.6s';
 observer.observe(card);
+});
+
+cards.forEach(card=>{
+card.style.opacity='0';
+card.style.transform='translateY(40px)';
+card.style.transition='0.6s';
+observer.observe(card);
+});
+
+// ==========================
+// LOADER
+// ==========================
+
+window.addEventListener("load",function(){
+
+setTimeout(function(){
+
+document.getElementById("loader").classList.add("hide");
+
+},1800);
+
 });
 
 </script>
