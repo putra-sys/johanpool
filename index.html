@@ -549,6 +549,59 @@ font-size:14px;
 
 }
 
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+    display:block;
+}
+
+nav{
+
+    position:absolute;
+    top:90px;
+    left:0;
+
+    width:100%;
+
+    background:#081420;
+
+    display:none;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px 0;
+
+}
+
+nav.active{
+    display:flex;
+}
+
+nav a{
+
+    margin:15px 0;
+
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.title{
+    font-size:35px;
+}
+
+}
+
 </style>
 </head>
 <body>
@@ -589,6 +642,10 @@ font-size:14px;
 <a href="#kontak">Kontak</a>
 
 </nav>
+
+<div class="menu-toggle" id="menuToggle">
+    ☰
+</div>
 
 </header>
 
@@ -913,6 +970,15 @@ setTimeout(function(){
 document.getElementById("loader").classList.add("hide");
 
 },1800);
+
+});
+
+    const menuToggle=document.getElementById("menuToggle");
+const nav=document.querySelector("nav");
+
+menuToggle.addEventListener("click",()=>{
+
+    nav.classList.toggle("active");
 
 });
 
