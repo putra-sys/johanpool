@@ -12,7 +12,11 @@
 <meta name="description"
 content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional di Depok, Jakarta, Bogor dan sekitarnya.">
 
-<link href="img/home.jpg/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -100,10 +104,12 @@ text-align:center;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -111,13 +117,13 @@ html{
 section{
     scroll-margin-top:110px;
 }
-    
-body{
-background:#081420;
-color:white;
-overflow-x:hidden;
-}
 
+body{
+    background:#081420;
+    color:white;
+    overflow-x:hidden;
+}
+    
 /* NAVBAR */
 
 header{
@@ -307,22 +313,6 @@ box-shadow:0 0 25px rgba(37,211,102,.6);
 }
 
 /* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-nav{
-display:none;
-}
-
-.title{
-font-size:35px;
-}
-
-}
 
 @media(max-width:768px){
 
@@ -679,7 +669,7 @@ Konsultasi Gratis
 
 </section>
 
-<section class="faq">
+<section class="faq" id="faq">
 
 <h2 class="title">Pertanyaan Umum (FAQ)</h2>
 
@@ -903,13 +893,6 @@ entry.target.style.opacity='1';
 entry.target.style.transform='translateY(0)';
 }
 });
-});
-
-cards.forEach(card=>{
-card.style.opacity='0';
-card.style.transform='translateY(40px)';
-card.style.transition='0.6s';
-observer.observe(card);
 });
 
 cards.forEach(card=>{
