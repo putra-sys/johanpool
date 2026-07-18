@@ -1236,24 +1236,24 @@ observer.observe(card);
 // LOADER
 // ==========================
 
-window.addEventListener("load",function(){
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
 
-setTimeout(function(){
-
-document.getElementById("loader").classList.add("hide");
-
-},1800);
-
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("hide");
+        }, 1800);
+    }
 });
+    
+   const menuToggle = document.getElementById("menuToggle");
+const nav = document.querySelector("nav");
 
-    const menuToggle=document.getElementById("menuToggle");
-const nav=document.querySelector("nav");
-
-menuToggle.addEventListener("click",()=>{
-
-    nav.classList.toggle("active");
-
-});
+if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+}
 
 const counters=document.querySelectorAll(".counter");
 
