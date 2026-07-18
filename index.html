@@ -647,6 +647,138 @@ box-shadow:0 0 0 0 rgba(0,255,150,0);
 
 }
 
+/* ================= HERO PREMIUM ================= */
+
+.hero-actions{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:35px;
+}
+
+.btn-outline{
+padding:15px 35px;
+border:2px solid #fff;
+border-radius:50px;
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.35s;
+backdrop-filter:blur(10px);
+}
+
+.btn-outline:hover{
+background:#fff;
+color:#0099ff;
+}
+
+.hero-rating{
+margin:30px auto;
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 22px;
+border-radius:50px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+color:#fff;
+font-weight:600;
+}
+
+.hero-rating i{
+color:#FFD700;
+}
+
+.hero-stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+max-width:1000px;
+margin:35px auto;
+}
+
+.stat-card{
+background:rgba(12,35,65,.55);
+border:1px solid rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+border-radius:18px;
+padding:30px 20px;
+transition:.35s;
+}
+
+.stat-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.stat-card i{
+font-size:32px;
+color:#18bfff;
+margin-bottom:15px;
+}
+
+.stat-card h2{
+font-size:48px;
+color:#18bfff;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:16px;
+color:#fff;
+}
+
+.hero-badges{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
+}
+
+.hero-badges span{
+background:#fff;
+padding:12px 22px;
+border-radius:40px;
+color:#0099ff;
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.scroll-indicator{
+margin-top:40px;
+color:#fff;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+}
+
+@media(max-width:992px){
+
+.hero-stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-stats{
+grid-template-columns:1fr;
+}
+
+.hero-rating{
+display:flex;
+flex-direction:column;
+text-align:center;
+}
+
+}
+
 </style>
 
 <head>
@@ -718,12 +850,88 @@ Bangun <span>Kolam Renang Impian</span> Anda
 Jasa pembuatan, renovasi dan maintenance kolam renang profesional untuk rumah, villa, hotel dan area komersial.
 </p>
 
-<a
-href="https://wa.me/6283899705188?text=Halo%20Johan%20Pool,%20saya%20ingin%20konsultasi"
-target="_blank"
-class="btn">
-Konsultasi Gratis
-</a>
+<div class="hero-actions">
+
+    <a href="#kontak" class="btn">
+        Konsultasi Gratis
+    </a>
+
+    <a href="#galeri" class="btn-outline">
+        <i class="fa-solid fa-images"></i>
+        Lihat Proyek
+    </a>
+
+</div>
+
+<div class="hero-rating">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+<span>5.0 Google Rating • 100+ Review Pelanggan</span>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="stat-card">
+<i class="fa-solid fa-person-swimming"></i>
+<h2 class="counter" data-target="150">0</h2>
+<p>Proyek Selesai</p>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-award"></i>
+<h2 class="counter" data-target="12">0</h2>
+<p>Tahun Pengalaman</p>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-face-smile"></i>
+<h2 class="counter" data-target="98">0</h2>
+<p>Klien Puas</p>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h2>5 Th</h2>
+<p>Garansi Struktur</p>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-headset"></i>
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-location-dot"></i>
+<h2>FREE</h2>
+<p>Survey</p>
+</div>
+
+</div>
+
+<div class="hero-badges">
+
+<span><i class="fa-solid fa-circle-check"></i> Material Berkualitas</span>
+
+<span><i class="fa-solid fa-circle-check"></i> Tim Profesional</span>
+
+<span><i class="fa-solid fa-circle-check"></i> Harga Transparan</span>
+
+<span><i class="fa-solid fa-circle-check"></i> Bergaransi</span>
+
+</div>
+
+<div class="scroll-indicator">
+
+<i class="fa-solid fa-angles-down"></i>
+
+<p>Scroll untuk melihat proyek terbaru</p>
 
 </div>
 
@@ -1047,7 +1255,55 @@ menuToggle.addEventListener("click",()=>{
 
 });
 
+const counters=document.querySelectorAll(".counter");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=parseInt(counter.dataset.target);
+
+let current=0;
+
+const increment=Math.max(1,Math.ceil(target/60));
+
+function animate(){
+
+current+=increment;
+
+if(current>=target){
+
+counter.innerHTML=target+(target===98?"%":"+");
+
+}else{
+
+counter.innerHTML=current+(target===98?"%":"+");
+
+requestAnimationFrame(animate);
+
+}
+
+}
+
+animate();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>observer.observe(counter));
+
 </script>
+
+
 
 </body>
 </html>
