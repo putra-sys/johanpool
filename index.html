@@ -7,6 +7,11 @@
 <meta property="og:description" content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional.">
 <meta property="og:image" content="img/kolam1.jpg">
 <meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Johan's Pool">
+<meta name="theme-color" content="#00C2FF">
+<meta property="og:url" content="https://johanspool.jhnsp.workers.dev/">
+<meta property="og:site_name" content="Johan's Pool">
 <title>Jasa Pembuatan Kolam Renang Depok | Johan Pool</title>
 
 <meta name="description"
@@ -21,7 +26,14 @@ content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional di De
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-</head>
+<link
+rel="canonical"
+href="https://johanspool.jhnsp.workers.dev/">
+
+<link
+rel="icon"
+type="image/png"
+href="img/favicon.png">
 
 <style>
 
@@ -781,18 +793,10 @@ text-align:center;
 
 </style>
 
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-...
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<script type="application/ld+json">
     
 </head>
+    
 <body>
 
 <!-- LOADER -->
@@ -841,6 +845,10 @@ text-align:center;
 <section class="hero" id="home">
 
 <div class="hero-content">
+
+</div>
+
+</section>
 
 <h1>
 Bangun <span>Kolam Renang Impian</span> Anda
@@ -1205,10 +1213,10 @@ Chat WhatsApp
 
 </footer>
 
-<a
+<a<a
 href="https://wa.me/6283899705188"
 target="_blank"
-class="wa">
+rel="noopener noreferrer">
 💬
 </a>
 
@@ -1216,7 +1224,7 @@ class="wa">
 
 const cards=document.querySelectorAll('.card');
 
-const observer=new IntersectionObserver(entries=>{
+const cardObserver = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.style.opacity='1';
@@ -1229,7 +1237,7 @@ cards.forEach(card=>{
 card.style.opacity='0';
 card.style.transform='translateY(40px)';
 card.style.transition='0.6s';
-observer.observe(card);
+counterObserver.observe(counter);
 });
 
 // ==========================
@@ -1257,7 +1265,7 @@ if (menuToggle && nav) {
 
 const counters=document.querySelectorAll(".counter");
 
-const observer=new IntersectionObserver((entries)=>{
+const counterObserver = new IntersectionObserver((entries)=>{
 
 entries.forEach(entry=>{
 
