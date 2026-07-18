@@ -794,6 +794,13 @@ text-align:center;
 </style>
 
 <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Johan's Pool"
+}
+    
+</script>
     
 </head>
     
@@ -845,10 +852,6 @@ text-align:center;
 <section class="hero" id="home">
 
 <div class="hero-content">
-
-</div>
-
-</section>
 
 <h1>
 Bangun <span>Kolam Renang Impian</span> Anda
@@ -1179,6 +1182,7 @@ loading="lazy">
   <a
 href="https://www.google.com/maps/search/?api=1&query=MQ4R%2B6J8%20Johan%27s%20Pool%20Cinere%20Depok"
 target="_blank"
+rel="noopener noreferrer"
 class="btn"
 style="background:#0A84FF;">
 📍 Lihat Lokasi Kami
@@ -1189,6 +1193,7 @@ style="background:#0A84FF;">
 <a
 href="https://wa.me/6283899705188?text=Halo%20Johan%20Pool"
 target="_blank"
+rel="noopener noreferrer"
 class="btn">
 Chat WhatsApp
 </a>
@@ -1213,10 +1218,11 @@ Chat WhatsApp
 
 </footer>
 
-<a<a
+<a
 href="https://wa.me/6283899705188"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+class="wa">
 💬
 </a>
 
@@ -1237,7 +1243,8 @@ cards.forEach(card=>{
 card.style.opacity='0';
 card.style.transform='translateY(40px)';
 card.style.transition='0.6s';
-counterObserver.observe(counter);
+
+cardObserver.observe(card);
 });
 
 // ==========================
@@ -1299,7 +1306,7 @@ requestAnimationFrame(animate);
 
 animate();
 
-observer.unobserve(counter);
+counterObserver.unobserve(counter);
 
 }
 
@@ -1307,7 +1314,7 @@ observer.unobserve(counter);
 
 });
 
-counters.forEach(counter=>observer.observe(counter));
+counters.forEach(counter=>counterObserver.observe(counter));
 
 </script>
 
