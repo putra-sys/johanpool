@@ -64,17 +64,10 @@ drop-shadow(0 0 15px #00C2FF);
 }
 
 .logo img{
-height:90px;
-filter:
-drop-shadow(0 0 6px rgba(0,194,255,.4))
-drop-shadow(0 0 12px rgba(0,194,255,.25));
-transition:.4s;
-}
-
-.logo img{
-    height:70px;
+    height:58px;
     width:auto;
     display:block;
+    transition:.3s;
 }
 
 header{
@@ -106,18 +99,13 @@ line-height:1.6;
 /* FOOTER */
 
 footer{
-background:#06101c;
-padding:40px;
-text-align:center;
-}
 
-:root{
---dark:#081420;
---navy:#0A2647;
---blue:#144272;
---aqua:#00C2FF;
---water:#4DEEEA;
---white:#ffffff;
+padding:60px 8%;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+background:#07111d;
+
 }
 
 *{
@@ -144,32 +132,25 @@ body{
 /* NAVBAR */
 
 header{
-position:fixed;
-width:100%;
-top:0;
-z-index:999;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(10px);
-}
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
 
-.logo{
-font-size:32px;
-font-weight:800;
-}
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-.logo span{
-color:var(--aqua);
-}
+    padding:0 8%;
 
-nav a{
-text-decoration:none;
-color:white;
-margin-left:25px;
-font-weight:500;
+    background:rgba(8,20,32,.78);
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
+    transition:.35s;
 }
 
 /* HERO */
@@ -188,32 +169,38 @@ font-weight:500;
 }
 
 .hero-content{
-    width:100%;
-    max-width:1100px;
-    margin:auto;
+
+max-width:1100px;
+
+margin:auto;
+
+text-align:center;
+
 }
 
 .hero h1{
 
-font-size:clamp(38px,5vw,58px);
+font-size:clamp(40px,5vw,62px);
+
+font-weight:800;
+
 line-height:1.15;
+
 margin-bottom:18px;
 
-}
-
-.hero h1 span{
-color:var(--aqua);
 }
 
 .hero p{
 
 max-width:760px;
 
-margin:0 auto 25px;
+margin:auto;
 
 font-size:18px;
 
 line-height:1.7;
+
+color:#ddd;
 
 }
 
@@ -267,14 +254,25 @@ gap:25px;
 }
 
 .card{
+
 background:#10233f;
-padding:30px;
-border-radius:20px;
-transition:.4s;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+padding:35px;
+
+transition:.35s;
+
 }
 
 .card:hover{
-transform:translateY(-10px);
+
+transform:translateY(-8px);
+
+box-shadow:0 18px 35px rgba(0,194,255,.18);
+
 }
 
 .card h3{
@@ -287,12 +285,25 @@ margin-bottom:15px;
 padding:100px 8%;
 }
 
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+.gallery-grid img{
+
+aspect-ratio:4/3;
+
+border-radius:18px;
+
+transition:.4s;
+
+cursor:pointer;
+
 }
 
+.gallery-grid img:hover{
+
+transform:scale(1.03);
+
+filter:brightness(1.1);
+
+}
 .gallery-grid img{
 width:100%;
 height:300px;
@@ -345,10 +356,24 @@ box-shadow:0 0 25px rgba(37,211,102,.6);
 
 .hero{
 
-padding:140px 20px 80px;
+padding:120px 25px 60px;
 
 }
 
+.hero-stats{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+    
 .hero h1{
 
 font-size:38px;
@@ -357,7 +382,7 @@ font-size:38px;
 
 .hero-actions{
 
-margin:25px 0;
+margin:30px 0;
 
 display:flex;
 
@@ -378,12 +403,16 @@ width:100%;
 .hero-rating{
 
 display:inline-flex;
-align-items:center;
-gap:6px;
 
 padding:10px 20px;
 
-margin:20px auto;
+border-radius:50px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(14px);
+
+margin:10px auto 30px;
 
 font-size:15px;
 
@@ -620,35 +649,21 @@ font-size:14px;
 .menu-toggle{
     display:block;
 }
-
+    
 nav{
-
-    position:absolute;
-    top:90px;
-    left:0;
-
-    width:100%;
-
-    background:#081420;
-
-    display:none;
-
-    flex-direction:column;
-
-    text-align:center;
-
-    padding:20px 0;
-
-}
-
-nav.active{
     display:flex;
+    gap:28px;
 }
 
 nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
 
-    margin:15px 0;
-
+nav a:hover{
+    color:#00C2FF;
 }
 
 .hero h1{
@@ -747,44 +762,57 @@ color:#FFD700;
 .hero-stats{
 
 display:grid;
-grid-template-columns:repeat(3,minmax(220px,1fr));
-gap:25px;
 
-margin-top:45px;
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+margin-top:20px;
 
 }
 
 .stat-card{
 
-padding:18px;
+background:rgba(255,255,255,.08);
 
-min-height:140px;
+backdrop-filter:blur(18px);
 
-border-radius:16px;
+border:1px solid rgba(255,255,255,.08);
+
+padding:22px;
+
+border-radius:18px;
+
+transition:.35s;
 
 }
     
 .stat-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 45px rgba(0,0,0,.25);
-}
 
+transform:translateY(-6px);
+
+box-shadow:0 20px 35px rgba(0,194,255,.18);
+
+}
+    
 .stat-card i{
 
-font-size:28px;
+font-size:30px;
 
 margin-bottom:10px;
 
-}
+color:#00C2FF;
 
+}
+    
 .stat-card h2{
 
 font-size:34px;
 
-margin-bottom:5px;
+margin-bottom:6px;
 
 }
-
+    
 .stat-card p{
 font-size:16px;
 color:#fff;
@@ -980,50 +1008,18 @@ Jasa pembuatan, renovasi dan maintenance kolam renang profesional untuk rumah, v
 <p>Survey</p>
 </div>
 
-</div>
+.scroll-indicator{
 
-<div class="hero-badges">
+margin-top:25px;
 
-<span><i class="fa-solid fa-circle-check"></i> Material Berkualitas</span>
+opacity:.75;
 
-<span><i class="fa-solid fa-circle-check"></i> Tim Profesional</span>
+font-size:14px;
 
-<span><i class="fa-solid fa-circle-check"></i> Harga Transparan</span>
+animation:bounce 2s infinite;
 
-<span><i class="fa-solid fa-circle-check"></i> Bergaransi</span>
-
-</div>
-
-<div class="scroll-indicator">
-
-<i class="fa-solid fa-angles-down"></i>
-
-<p>Scroll untuk melihat proyek terbaru</p>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="stat">
-<h2>150+</h2>
-<p>Proyek Selesai</p>
-</div>
-
-<div class="stat">
-<h2>12+</h2>
-<p>Tahun Pengalaman</p>
-</div>
-
-<div class="stat">
-<h2>98%</h2>
-<p>Klien Puas</p>
-</div>
-
-<div class="stat">
-<h2>24/7</h2>
-<p>Support</p>
+}
+    
 </div>
 
 </section>
