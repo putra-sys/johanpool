@@ -24,6 +24,9 @@ content="Jasa pembuatan, renovasi dan maintenance kolam renang profesional di De
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link
@@ -279,43 +282,148 @@ box-shadow:0 18px 35px rgba(0,194,255,.18);
 margin-bottom:15px;
 }
 
-/* GALLERY */
+/* ===========================
+   GALLERY PREMIUM
+=========================== */
 
 .gallery{
-padding:100px 8%;
+
+padding:110px 8%;
+
+background:#091728;
+
 }
 
-.gallery-grid img{
+.gallery-subtitle{
 
-aspect-ratio:4/3;
+text-align:center;
 
-border-radius:18px;
+max-width:700px;
 
-transition:.4s;
+margin:0 auto 50px;
+
+color:#d9d9d9;
+
+line-height:1.7;
+
+}
+
+.gallerySwiper{
+
+padding:20px 10px 60px;
+
+}
+
+.swiper-slide{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:20px;
 
 cursor:pointer;
 
 }
 
-.gallery-grid img:hover{
+.swiper-slide img{
 
-transform:scale(1.03);
-
-filter:brightness(1.1);
-
-}
-.gallery-grid img{
 width:100%;
-height:300px;
+
+height:340px;
+
 object-fit:cover;
-border-radius:20px;
-transition:.4s;
+
+transition:.6s;
+
+display:block;
+
 }
 
-.gallery-grid img:hover{
-transform:scale(1.05);
+.swiper-slide:hover img{
+
+transform:scale(1.12);
+
 }
 
+.overlay{
+
+position:absolute;
+
+left:0;
+right:0;
+bottom:0;
+
+padding:25px;
+
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.92)
+);
+
+transform:translateY(100%);
+
+transition:.45s;
+
+}
+
+.swiper-slide:hover .overlay{
+
+transform:translateY(0);
+
+}
+
+.overlay h3{
+
+margin-bottom:8px;
+
+font-size:22px;
+
+color:#fff;
+
+}
+
+.overlay p{
+
+color:#00C2FF;
+
+font-size:15px;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+
+color:#00C2FF;
+
+}
+
+.swiper-pagination-bullet{
+
+background:#ffffff;
+
+opacity:.4;
+
+}
+
+.swiper-pagination-bullet-active{
+
+background:#00C2FF;
+
+opacity:1;
+
+}
+
+@media(max-width:768px){
+
+.swiper-slide img{
+
+height:250px;
+
+}
+
+}
+    
 /* CONTACT */
 
 .contact{
@@ -1094,27 +1202,114 @@ Tentu, konsultasi awal GRATIS melalui WhatsApp untuk membahas kebutuhan kolam re
 
 <section class="gallery" id="galeri">
 
-<h2 class="title">Galeri Proyek</h2>
+<h2 class="title">Galeri Proyek Kami</h2>
 
-<div class="gallery-grid">
+<p class="gallery-subtitle">
+Beberapa hasil pengerjaan kolam renang Johan's Pool
+di Depok, Jakarta, Bogor dan sekitarnya.
+</p>
 
-<img src="img/ok kolam.jpg">
+<div class="swiper gallerySwiper">
 
-<img src="img/over flow.jpg">
+<div class="swiper-wrapper">
 
-<img src="img/sceming.jpg">
+<div class="swiper-slide">
+<img src="img/ok kolam.jpg"
+alt="Kolam Renang Modern"
+loading="lazy">
+<div class="overlay">
+<h3>Modern Pool</h3>
+<p>Depok</p>
+</div>
+</div>
 
-<img src="img/kolam 1.jpg">
+<div class="swiper-slide">
+<img src="img/over flow.jpg"
+alt="Overflow Pool"
+loading="lazy">
+<div class="overlay">
+<h3>Overflow Pool</h3>
+<p>Jakarta</p>
+</div>
+</div>
 
-<img src="img/kolam.jpg">
+<div class="swiper-slide">
+<img src="img/sceming.jpg"
+alt="Skimmer Pool"
+loading="lazy">
+<div class="overlay">
+<h3>Skimmer Pool</h3>
+<p>Bogor</p>
+</div>
+</div>
 
-<img src="img/ok kolam1.jpg">
+<div class="swiper-slide">
+<img src="img/kolam 1.jpg"
+alt="Kolam Villa"
+loading="lazy">
+<div class="overlay">
+<h3>Villa Pool</h3>
+<p>Cinere</p>
+</div>
+</div>
 
-<img src="img/over flow1.jpg">
+<div class="swiper-slide">
+<img src="img/kolam.jpg"
+alt="Private Pool"
+loading="lazy">
+<div class="overlay">
+<h3>Private Pool</h3>
+<p>Depok</p>
+</div>
+</div>
 
-<img src="img/overflow.jpg">
+<div class="swiper-slide">
+<img src="img/ok kolam1.jpg"
+alt="Luxury Pool"
+loading="lazy">
+<div class="overlay">
+<h3>Luxury Pool</h3>
+<p>Jakarta Selatan</p>
+</div>
+</div>
 
-<img src="img/sceming1.jpg">
+<div class="swiper-slide">
+<img src="img/over flow1.jpg"
+alt="Kolam Renang"
+loading="lazy">
+<div class="overlay">
+<h3>Residential Pool</h3>
+<p>Tangerang</p>
+</div>
+</div>
+
+<div class="swiper-slide">
+<img src="img/overflow.jpg"
+alt="Kolam Renang Overflow"
+loading="lazy">
+<div class="overlay">
+<h3>Overflow System</h3>
+<p>Bekasi</p>
+</div>
+</div>
+
+<div class="swiper-slide">
+<img src="img/sceming1.jpg"
+alt="Kolam Skimmer"
+loading="lazy">
+<div class="overlay">
+<h3>Skimmer Pool</h3>
+<p>Bogor</p>
+</div>
+</div>
+
+</div>
+
+<div class="swiper-pagination"></div>
+
+<div class="swiper-button-next"></div>
+
+<div class="swiper-button-prev"></div>
 
 </div>
 
@@ -1370,7 +1565,67 @@ counters.forEach(counter=>counterObserver.observe(counter));
 
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<script>
+
+const gallerySwiper = new Swiper(".gallerySwiper",{
+
+loop:true,
+
+speed:900,
+
+spaceBetween:25,
+
+grabCursor:true,
+
+centeredSlides:true,
+
+autoplay:{
+
+delay:3000,
+
+disableOnInteraction:false,
+
+pauseOnMouseEnter:true
+
+},
+
+pagination:{
+
+el:".swiper-pagination",
+
+clickable:true
+
+},
+
+navigation:{
+
+nextEl:".swiper-button-next",
+
+prevEl:".swiper-button-prev"
+
+},
+
+breakpoints:{
+
+0:{
+slidesPerView:1
+},
+
+768:{
+slidesPerView:2
+},
+
+1200:{
+slidesPerView:3
+}
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
